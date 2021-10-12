@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="70" height="71" viewBox="0 0 70 71">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="34.756" height="31.808" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Group_2824" data-name="Group 2824" transform="translate(-0.234)">
+    <g id="Group_2813" data-name="Group 2813" transform="translate(0 0)">
+      <g id="Group_2808" data-name="Group 2808" transform="translate(0 0)">
+        <g id="Group_2796" data-name="Group 2796">
+          <g id="Ellipse_502" data-name="Ellipse 502" transform="translate(0.234 0)" fill="none" stroke="#707070" stroke-width="1">
+            <ellipse cx="35" cy="35.5" rx="35" ry="35.5" stroke="none"/>
+            <ellipse cx="35" cy="35.5" rx="34.5" ry="35" fill="none"/>
+          </g>
+        </g>
+        <g id="icon_heart" transform="translate(17.979 20.745)" clip-path="url(#clip-path)">
+          <path id="Heart" d="M32,2.8a9.338,9.338,0,0,0-13.292,0L17.4,4.111,16.1,2.8A9.4,9.4,0,0,0,2.8,16.1l14.6,14.6L32,16.1A9.338,9.338,0,0,0,32,2.8" transform="translate(-0.025 -0.025)" fill="#707070" fill-rule="evenodd"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

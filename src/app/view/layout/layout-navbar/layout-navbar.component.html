@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg navbar-light" [ngClass]="currentBg()">
+
+  <a href="javascript:void(0)" class="layout-sidenav-toggle sidenav-link text-large ml-auto mb-1" (click)="toggleSidenav()">
+    <i class="fa fa-bars align-middle text-dark"></i>
+  </a>
+  <img class="app-brand-logo cg ml-2 mt-2" src="../../../assets/img/logo.svg" />
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="navbar-nav mr-auto">
+      <label class="nav-item navbar-text navbar-search-box p-0 active ml-4">
+        <!-- <i class="ion ion-ios-search navbar-icon align-middle"></i> -->
+        <span class="navbar-search-input pl-2 w-100">
+          <!-- <input class="form-control navbar-text" placeholder="Search..." type="text"> -->
+        </span>
+      </label>
+    </div>
+    <div class="form-inline my-2 my-lg-0">
+      <!-- <i class="fas fa-bell mr-2"></i> -->
+
+        <!-- <app-environment></app-environment>&nbsp; -->
+      
+        <button class="btn btn-outline-light my-2 my-sm-0 text-white" style="background-color:#9D053B;" (click)="login()"
+          *ngIf="!name">Login</button>
+
+
+
+      <div class="demo-navbar-user nav-item dropdown" id="dropdownMenuButton" data-toggle="dropdown" *ngIf="name">
+        <a aria-haspopup="true" class="nav-link dropdown-toggle" href="javascript:void(0)" ngbdropdowntoggle=""
+          aria-expanded="false">
+          <span class="px-1 mr-lg-2 ml-2 ml-lg-0">{{name}}</span>
+        </a>
+        <div aria-labelledby="dropdownMenuButton" class="dropdown-menu-right dropdown-menu">
+          <a class="dropdown-item" href="javascript:void(0)" (click)="resetPassword()"><i
+              class="far fa-id-badge text-muted"></i> &nbsp; Redefinir Senha</a>
+          <a class="dropdown-item" href="javascript:void(0)" (click)="TwoFactorAuthentication()"><i
+              class="fas fa-exchange-alt text-muted"></i> &nbsp;Autenticação dois fatores</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="javascript:void(0)" (click)="logout()"><i
+              class="fas fa-sign-out-alt text-danger"></i> &nbsp; Log Out</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

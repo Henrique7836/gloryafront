@@ -1,0 +1,54 @@
+<sidenav [orientation]="orientation" [ngClass]="getClasses()">
+
+
+  <!-- Inner -->
+  <div class="sidenav-inner d-flex align-items-end flex-column bd-highlight"
+    style="background-color:#C42C2C; font: Regular 15px/19px Source Sans Pro;"
+    [ngClass]="{ 'py-1': orientation !== 'horizontal' }">
+    <sidenav-router-link icon="ion-md-home" route="/" [active]="isActive('/')" title="Home">Home</sidenav-router-link>
+
+    <sidenav-menu icon="ion-md-stats" class="bg-light mb-1" text="Dashboard" [class.isCollapsed]="isCollapsed()" [active]="isMenuActive('/dashboards')"
+      [open]="isMenuOpen('/dashboards')" title="Dashboard">
+      <sidenav-router-link icon="fas fa-heart" route="/healthcheck" (click)="hovering()"
+        [active]="isActive('/healthcheck')" title="Saúde dos Dispositivos">Saúde dos Dispositivos
+      </sidenav-router-link>
+      <sidenav-router-link icon="fas fa-unlock-alt" route="/security" [active]="isActive('/security')" title="Segurança">Segurança
+      </sidenav-router-link>
+      <sidenav-router-link icon="fas fa-bookmark" route="/policies" [active]="isActive('/policies')" title="Políticas">Políticas
+      </sidenav-router-link>
+    </sidenav-menu>
+
+
+    <sidenav-menu icon="fas fa-file-contract" class="bg-light mb-1" [class.isCollapsed]="isCollapsed()" text="Relatórios" [active]="isMenuActive('/reports')"
+      [open]="isMenuOpen('/reports')" title="Relatórios">
+
+      <sidenav-router-link icon="fa fa-briefcase" route="/report-detail"
+        [active]="isActive('/report-detail')" title="Relatório de Acompanhamento">Relatório de Acompanhamento
+      </sidenav-router-link>
+      <sidenav-router-link icon="far fa-hdd" route="/devices" [active]="isActive('/devices')" title="Relatório Geral">Relatório Geral
+      </sidenav-router-link>
+
+    </sidenav-menu>
+
+    <sidenav-menu icon="fas fa-chart-pie" class="bg-light mb-1" [class.isCollapsed]="isCollapsed()" text="ScoreCard" [active]="isMenuActive('/scorecard')"
+      [open]="isMenuOpen('/scorecard')" title="ScoreCard">
+
+      <sidenav-router-link icon="far fa-file" route="/scorecard/summary"
+        [active]="isActive('/scorecard/summary')" title="Resumo">Resumo
+      </sidenav-router-link>
+
+      <sidenav-router-link icon="fas fa-file-signature" route="/scorecard/detail"
+      [active]="isActive('/scorecard/detail')" title="Detalhes">Detalhes
+    </sidenav-router-link>
+
+
+      <sidenav-router-link icon="fas fa-history" route="/scorecard/historic" [active]="isActive('/scorecard/historic')" title="Histórico">Histórico
+      </sidenav-router-link>
+
+    </sidenav-menu>
+
+    <sidenav-router-link icon="ion-ios-cube" route="/inventory" [active]="isActive('/inventory')" title="Inventário">Inventário
+    </sidenav-router-link>
+
+  </div>
+</sidenav>
