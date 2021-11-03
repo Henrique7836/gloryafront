@@ -1,0 +1,34 @@
+<div class="container-fluid">
+    <div class="d-flex justify-content-center card">
+        <form> 
+            <div class="form-group">
+                <label for="PAM">PAM</label>
+                <input type="text" class="form-control" id="PAM" placeholder="PAM do cartão" name="PAM" [(ngModel)]="PAM">
+            </div>
+            <div class="form-group">
+                <label for="dataExpiracao">Data expiração</label>
+                <input type="date" class="form-control" id="dataExpiracao" placeholder="Data de expiração do cartão"
+                name="dataExpiracao" [(ngModel)]="dataExpiracao">
+            </div>
+            <div class="form-group">
+                <label for="valor">Valor</label>
+                <input type="text" class="form-control" id="valor" aria-describedby="valorHelp"
+                    placeholder="Valor adicionado ao cartão" name="valor" [(ngModel)]="valor">
+            </div>
+            <!-- <div class="form-group">
+                <label for="inputState">Premiado</label>
+                <select id="inputState" class="form-control">
+                    <option selected>Escolha um premiado...</option>
+                    <option *ngFor="let selectedPremiado of listaPremiados" name="selectedPremiado.nome" [(ngValue)]="selectedPremiado.nome">
+                        {{selectedPremiado.nome}}</option>
+                </select>
+            </div> -->
+            <!-- <div class="form-group">
+                <label for="PAM">Premiado</label>
+                <input class="form-control" id="PAM" placeholder="PAM do cartão">
+            </div> -->
+
+            <button type="submit" (click)="salvar($event)" class="btn btn-primary">Salvar</button>
+        </form>
+    </div>
+</div>

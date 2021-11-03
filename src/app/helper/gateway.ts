@@ -10,7 +10,7 @@ import { map, catchError } from 'rxjs/operators';
 export class Gateway {
 
     //private url = environment.apiBaseUrl;
-    private url = 'environment.dommerApiBaseUrl';
+    private url = 'http://localhost:8080/api';
 
     constructor(
         private http: HttpClient,

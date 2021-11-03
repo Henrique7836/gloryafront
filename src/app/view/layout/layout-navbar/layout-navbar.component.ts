@@ -3,7 +3,6 @@ import { AppService } from '../../../service/app/app.service';
 import { LayoutService } from '../layout.service';
 import { Router } from '@angular/router';
 import { smoothlyMenu } from '../../../app.helpers';
-import ComplianceUtil from "../../../util/compliance-util";
 declare var jQuery: any;
 @Component({
   selector: 'app-layout-navbar',
@@ -16,7 +15,6 @@ export class LayoutNavbarComponent {
   name: string;
   loading = true;
 
-  complianceUtil: ComplianceUtil = new ComplianceUtil();
   permissions = {};
   serverUrl;
   isLoading;
@@ -30,7 +28,6 @@ export class LayoutNavbarComponent {
     private layoutService: LayoutService,
     private router: Router
   ) {
-    this.complianceUtil = ComplianceUtil;
     this.isRTL = appService.isRTL;
     this.isLoading = true;
   }
